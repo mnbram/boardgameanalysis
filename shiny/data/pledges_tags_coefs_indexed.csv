@@ -1,0 +1,11 @@
+tag,type,coef,index
+Miniatures,Category,0.47407,1
+Comic Book / Strip,Category,0.25259,2
+Maze,Category,0.23308,3
+Variable Player Powers,Mechanic,0.08206,1
+Sports,Category,-0.04251,4
+Trick-taking,Mechanic,-0.04041,2
+Fighting,Category,0.03469,5
+Fantasy,Category,0.01946,6
+Press Your Luck,Mechanic,0.01493,3
+Player Elimination,Mechanic,5e-5,4

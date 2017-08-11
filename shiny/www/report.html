@@ -1,0 +1,96 @@
+<div class="row static-content" id="report-content">
+    <div class="col-sm-3" id="report-nav-col">
+        <nav id="report-nav">
+            <h3 id="report-nav-header">Contents</h3>
+            <ul id="report-nav-ul">
+                <li><a href="#results-summary">Results summary</a></li>
+                <li><a href="#modeling-database">Modeling games in the database</a></li>
+                <li class="nav-inset"><a href="#data-processing">Data processing</a></li>
+                <li class="nav-inset"><a href="#gams-for-games">Generalized additive models for game features</a></li>
+                <li class="nav-inset"><a href="#gam-ratings">GAM results: User ratings</a></li>
+                <li class="nav-inset"><a href="#gam-pledges">GAM results: Kickstarter pledges</a></li>
+                <li class="nav-inset"><a href="#glm-tags">Generalized linear models for tags</a></li>
+                <li><a href="#kick-success">Modeling failed game campaigns</a></li>
+                <li class="nav-inset"><a href="#nlp-processing">Data collection and processing</a></li>
+                <li class="nav-inset"><a href="#nlp-modeling">Logistic regression</a></li>
+                <li class="nav-inset"><a href="#nlp-results">Results of natural language processing</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="col-sm-9" id="report-main">
+        <section id="topline">
+            <div id="results-summary">
+            <h2 class="section-head">Results summary</h2>
+            <ul class="report-ul">
+                <li>7 general features significantly affect BoardGamegeek <strong>user ratings</strong>: year, complexity, suggested number of players, minimum age, play time, support for solo play, and two-player only or not</li>
+                <li>4 general features significantly affect <strong>Kickstarter pledge totals</strong>: launch date, complexity, play time, and minimum age</li>
+                <li>Terms in <strong>Kickstarter descriptions</strong> that are predictive of success or failure fall into two major categories: game-related (e.g. &ldquo;cooperative&rdquo;) and campaign-related (e.g. &ldquo;processing fee&rdquo;)</li>
+            </ul>
+            </div>
+        </section>
+        <section id="indatabase">
+            <div id="modeling-database">
+            <h2 class="section-head">Modeling games in the database</h2>
+            </div>
+            <div id="data-processing">
+            <h3 class="subsection-head">Data processing</h3>
+            <p>BoardGameGeek's <a href="https://boardgamegeek.com/wiki/page/BGG_XML_API2">XML API2</a> was used to obtain data on all games in the database. Entries with missing values for ratings; complexity; play time; or suggested, minumum, or maximum number of were discarded.</p>
+            <p>The suggested number of players and suggested minimum age are collected on BoardGameGeek as community polls. For both of these metrics, the highest-voted option was used in order to obtain a single value for each game. For minimum age, where community poll data does not exist, the publisher's listed minimum age was used instead when possible.</p>
+            <p>Kickstarter data, excluding campaign descriptions, was obtained from pre-compiled sets from <a href="https://webrobots.io/kickstarter-datasets/">Web Robots</a> and members of the <a href="https://github.com/markolson/kickscraper">Kickscraper</a> GitHub community. Only games from the "tabletop games" category on Kickstarter were used.</p>
+            <p>Successfully-funded Kickstarter games were matched to the BoardGameGeek database by title. Titles were counted as a match if, after removing punctuation and making all characters lowercase, the Kickstarter name starts with the BoardGameGeek title. In the event of multiple matches, only the match with the shortest name was kept.</p>
+            </div>
+            <div id="gams-for-games">
+            <h3 class="subsection-head">Generalized additive models for game features</h3>
+            <p>Generalized additive models (GAMs) were used to assess the effects of various game features on average user ratings and Kickstarter pledge totals (in US dollars) to successful campaigns. Models were constructed using the R package <a href="https://CRAN.R-project.org/package=mgcv"><span class="inline-code">mgcv</span></a>.</p>
+            <p>For both user ratings and Kickstarter pledge totals, the relationship to continuous variables in the model is not strictly linear, so smoothing terms were included as thin plate regression splines.</p>
+            <p>Inclusion or exclusion of each term in the model was determined by comparing generalized cross validation scores for models with and without the term in question.</p>
+            <p>Two categorical variables were included as possible model terms: two-player only (where the minumum and maximum number of players are both equal to two) and the inclusion of a solo/solitaire play option (where the minimum number of players is one).</p>
+            </div>
+            <div id="gam-ratings">
+            <h3 class="subsection-head">GAM results: User ratings</h3>
+            <p>Seven of the non-tag features considered significantly affect BoardGamegeek user ratings: year, complexity, suggested number of players, minimum age, play time (log scale), support for solo play, and two-player only or not.</p>
+            <p>Below, we can see examples of some of these variables. The red lines trace the model predictions for the given variable, while the shaded band shows two standard errors away from the mean.</p>
+            <img src="ratings_complexity.png" class="report-img">
+            <img src="ratings_twosolo.png" class="report-img">
+            <p>Click on the &ldquo;Explore&rdquo; tab at the top of the page to view all of the significant variables and to see how the ratings of individual games compare to the model predictions. The model has an R<sup>2</sup> value of ~0.46.</p>
+            </div>
+            <div id="gam-pledges">
+            <h3 class="subsection-head">GAM results: Kickstarter pledges</h3>
+            <p>In contrast to the user ratings model, only four non-tag features considered significantly affect total Kickstarter pledge amounts: launch date, complexity, minimum age, and play time (log scale).</p>
+            <p>Below, we see that similar to case for user ratings, Kickstarter pledges increase with greater game complexity up to a point, and then either plateau or even decrease at the upper limits of the complexity scale.</p>
+            <img src="pledges_complexity.png" class="report-img">
+            <p>Play time and minimum age show similar, but less pronounced patterns, likely in part because these variables are all positively correlated along at least part of their ranges.</p>
+            <p>For Kickstarter pledges, the model has an R<sub>2</sub> value of ~0.42.</p>
+            </div>
+            <div id="glm-tags">
+            <h3 class="subsection-head">Generalized linear models for tags</h3>
+            <p>Residuals from the above GAMs were used to assess the contribution of category and game mechanic tags to user ratings and Kickstarter pledge totals. Generalized linear models (GLMs) with elastic net regularization were built using the R packages <a href="https://CRAN.R-project.org/package=glmnet"><span class="inline-code">glmnet</span></a> and <a href="https://CRAN.R-project.org/package=caret"><span class="inline-code">caret</span></a>. The predicted contribution of each game's tags to user ratings and Kickstarter pledges can be viewed by visiting the corresponding page under the &ldquo;Explore&rdquo; tab above.</p>
+            </div>
+        </section>
+        <section id="notindatabase">
+            <div id="kick-success">
+            <h2 class="section-head">Modeling failed game campaigns</h2>
+            <p>For most of the ~30% of tabletop game Kickstarter campaigns that fail to meet their funding goal, the games do not exist in the BoardGameGeek database (because they never got made). In order to explore the factors that contribute to a campaign's success or failure, we can use natural language processing on the campaign descriptions from each game's Kickstarter page.</p>
+            </div>
+            <div id="nlp-processing">
+            <h3 class="subsection-head">Data collection and processing</h3>
+            <p>For each successful or failed campaign, blurbs and full descriptions were scraped from the Kickstarter website and stripped of non-text elements. Text was tokenized into sentences and words and lemmatized using the Python package <a href="https://spacy.io/"><span class="inline-code">spaCy</span></a>.</p>
+            <p>The data were stripped of stop words and further tokenized into unigrams and bigrams using the R package <a href="https://CRAN.R-project.org/package=tidytext"><span class="inline-code">tidytext</span></a>. Terms that did not appear in at least 0.1% of campaigns were excluded.</p>
+            </div>
+            <div id="nlp-modeling">
+            <h3 class="subsection-head">Logistic regression</h3>
+            <p>Success or failure was modeled using a logistic regression with lasso regularization using the R package <a href="https://CRAN.R-project.org/package=glmnet"><span class="inline-code">glmnet</span></a>. Terms were coded using a simple binary presence/absense bag-of-words model, which displayed better predictive accuracy than frequency-weighted models. Bigrams were given a 0.5 penalty in the lasso in order to normalize their presence relative to unigrams in the combined model.</p>
+            <p>The final model was built using 100 iterations of 10-fold cross-validation, averaging coefficients across iterations that include a given term. The area under the receiver operating characteristic curve (ROC AUC) was used to assess predictive performance. The final model's ROC AUC is ~0.75.</p>
+            </div>
+            <div id="nlp-results">
+            <h3 class="subsection-head">Results of natural language processing</h3>
+            <p>631 terms were retained with non-zero coefficients between the 100 final model iterations. Of these, only 5 were present in fewer than 70 model iterations.</p>
+            <p>Terms retained by the model tend to fall into two general categories: game-related and campaign-related.</p>
+            <p>Among terms related to the games themselves are strong positive predictors such as &ldquo;cooperative&rdquo; and &ldquo;miniature game&rdquo; and strong negative predictors such as &ldquo;chess&rdquo; and &ldquo;randomly select&rdquo;.</p>
+            <p>Terms related to the Kickstarter campaigns moreso than the games include the positive predictors &ldquo;promo card&rdquo; and &ldquo;tom&rdquo; (possibly due to influential game reviewer Tom Vasel) and the negative predictor &ldquo;processing fee&rdquo;.</p>
+            <p>The full set of predictive terms can be viewed under the &ldquo;Explore&rdquo; tab at the top of the page.</p>
+            </div>
+        </section>
+    </div>
+</div>
+

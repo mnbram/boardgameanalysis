@@ -1,0 +1,129 @@
+tag,type,coef,index
+Singing,Mechanic,-0.34766,1
+Crayon Rail System,Mechanic,0.32816,2
+Roll / Spin and Move,Mechanic,-0.23244,3
+Sports,Category,0.23231,1
+Game System,Category,0.2188,2
+Book,Category,0.2112,3
+Miniatures,Category,0.20422,4
+Trick-taking,Mechanic,0.19887,4
+Expansion for Base-game,Category,0.19237,5
+Line Drawing,Mechanic,0.1914,5
+Movies / TV / Radio theme,Category,-0.18847,6
+Acting,Mechanic,0.18259,6
+Video Game Theme,Category,-0.18118,7
+Grid Movement,Mechanic,0.17078,7
+Print & Play,Category,0.16928,8
+Zombies,Category,-0.16878,9
+Action / Dexterity,Category,0.16662,10
+Napoleonic,Category,0.15876,11
+Collectible Components,Category,-0.15688,12
+Negotiation,Category,-0.15604,13
+Role Playing,Mechanic,0.14803,8
+Route/Network Building,Mechanic,0.14705,9
+Paper-and-Pencil,Mechanic,0.14226,10
+Math,Category,-0.13785,14
+Rock-Paper-Scissors,Mechanic,-0.13717,11
+Racing,Category,0.13711,15
+Modern Warfare,Category,-0.13512,16
+Memory,Mechanic,0.13348,12
+Simultaneous Action Selection,Mechanic,0.13109,13
+Farming,Category,0.12656,17
+Vietnam War,Category,0.12282,18
+Deck / Pool Building,Mechanic,0.12136,14
+Chit-Pull System,Mechanic,0.1208,15
+World War I,Category,0.1208,19
+Betting/Wagering,Mechanic,0.11737,16
+Player Elimination,Mechanic,0.1102,17
+Civil War,Category,0.10784,20
+Word Game,Category,0.10371,21
+Aviation / Flight,Category,0.1037,22
+Trivia,Category,-0.10024,23
+Memory,Category,-0.09809,24
+Trains,Category,0.09271,25
+Travel,Category,0.09054,26
+Medical,Category,-0.0886,27
+Novel-based,Category,-0.08772,28
+Area Control / Area Influence,Mechanic,0.08641,18
+Religious,Category,-0.08611,29
+Adventure,Category,-0.08235,30
+Murder/Mystery,Category,0.07972,31
+Set Collection,Mechanic,0.07719,19
+Post-Napoleonic,Category,0.07676,32
+Nautical,Category,0.07623,33
+Science Fiction,Category,-0.0726,34
+Partnerships,Mechanic,0.07211,20
+City Building,Category,0.07152,35
+Bluffing,Category,0.06929,36
+Press Your Luck,Mechanic,0.06905,21
+Area-Impulse,Mechanic,0.06805,22
+Maze,Category,0.06805,37
+Simulation,Mechanic,0.0675,23
+Wargame,Category,0.06684,38
+Age of Reason,Category,0.06566,39
+Hand Management,Mechanic,0.06544,24
+Pick-up and Deliver,Mechanic,-0.06214,25
+Pike and Shot,Category,-0.06213,40
+Political,Category,-0.06203,41
+Party Game,Category,0.06126,42
+Dice Rolling,Mechanic,0.06049,26
+Ancient,Category,0.05957,43
+Commodity Speculation,Mechanic,0.05944,27
+Industry / Manufacturing,Category,-0.05914,44
+Time Track,Mechanic,-0.05833,28
+Area Movement,Mechanic,-0.05362,29
+Real-time,Category,0.04838,45
+Trading,Mechanic,-0.04825,30
+Campaign / Battle Card Driven,Mechanic,0.04479,31
+Korean War,Category,-0.0424,46
+Pattern Recognition,Mechanic,0.04225,32
+Spies/Secret Agents,Category,0.04108,47
+Educational,Category,0.04015,48
+Environmental,Category,-0.0397,49
+Number,Category,0.03802,50
+Action / Movement Programming,Mechanic,-0.03472,33
+Card Drafting,Mechanic,0.03446,34
+Abstract Strategy,Category,0.03332,51
+Co-operative Play,Mechanic,0.03318,35
+Tile Placement,Mechanic,0.03288,36
+Children's Game,Category,0.03258,52
+Dice,Category,-0.03241,53
+Take That,Mechanic,0.03207,37
+Humor,Category,-0.03026,54
+Pirates,Category,-0.02786,55
+Animals,Category,0.02779,56
+Electronic,Category,0.02739,57
+Card Game,Category,-0.02708,58
+Mafia,Category,0.02627,59
+Hex-and-Counter,Mechanic,-0.02586,38
+American Revolutionary War,Category,0.02229,60
+Point to Point Movement,Mechanic,-0.02188,39
+American Civil War,Category,0.02186,61
+Worker Placement,Mechanic,-0.02152,40
+Action Point Allowance System,Mechanic,0.02086,41
+Stock Holding,Mechanic,0.02063,42
+Arabian,Category,0.02062,62
+Area Enclosure,Mechanic,0.02049,43
+Transportation,Category,-0.02018,63
+Territory Building,Category,-0.02017,64
+Fighting,Category,0.01984,65
+Horror,Category,-0.01505,66
+Comic Book / Strip,Category,-0.01502,67
+Pattern Building,Mechanic,0.01311,44
+Modular Board,Mechanic,-0.01131,45
+Music,Category,-0.01125,68
+Puzzle,Category,-0.01124,69
+Secret Unit Deployment,Mechanic,0.01014,46
+Variable Player Powers,Mechanic,0.01003,47
+Voting,Mechanic,0.01002,48
+Storytelling,Mechanic,0.00965,49
+Deduction,Category,0.00848,70
+Fantasy,Category,-0.00833,71
+World War II,Category,0.00792,72
+Prehistoric,Category,0.00761,73
+Auction/Bidding,Mechanic,0.00757,50
+Medieval,Category,0.00555,74
+Civilization,Category,0.00501,75
+American West,Category,-0.00424,76
+Space Exploration,Category,-0.00185,77
+Variable Phase Order,Mechanic,6.3e-4,51

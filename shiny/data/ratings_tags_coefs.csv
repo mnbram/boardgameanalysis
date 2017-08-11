@@ -1,0 +1,129 @@
+tag,type,coef
+Singing,Mechanic,-0.34766
+Crayon Rail System,Mechanic,0.32816
+Roll / Spin and Move,Mechanic,-0.23244
+Sports,Category,0.23231
+Game System,Category,0.21880
+Book,Category,0.21120
+Miniatures,Category,0.20422
+Trick-taking,Mechanic,0.19887
+Expansion for Base-game,Category,0.19237
+Line Drawing,Mechanic,0.19140
+Movies / TV / Radio theme,Category,-0.18847
+Acting,Mechanic,0.18259
+Video Game Theme,Category,-0.18118
+Grid Movement,Mechanic,0.17078
+Print & Play,Category,0.16928
+Zombies,Category,-0.16878
+Action / Dexterity,Category,0.16662
+Napoleonic,Category,0.15876
+Collectible Components,Category,-0.15688
+Negotiation,Category,-0.15604
+Role Playing,Mechanic,0.14803
+Route/Network Building,Mechanic,0.14705
+Paper-and-Pencil,Mechanic,0.14226
+Math,Category,-0.13785
+Rock-Paper-Scissors,Mechanic,-0.13717
+Racing,Category,0.13711
+Modern Warfare,Category,-0.13512
+Memory,Mechanic,0.13348
+Simultaneous Action Selection,Mechanic,0.13109
+Farming,Category,0.12656
+Vietnam War,Category,0.12282
+Deck / Pool Building,Mechanic,0.12136
+Chit-Pull System,Mechanic,0.12080
+World War I,Category,0.12080
+Betting/Wagering,Mechanic,0.11737
+Player Elimination,Mechanic,0.11020
+Civil War,Category,0.10784
+Word Game,Category,0.10371
+Aviation / Flight,Category,0.10370
+Trivia,Category,-0.10024
+Memory,Category,-0.09809
+Trains,Category,0.09271
+Travel,Category,0.09054
+Medical,Category,-0.08860
+Novel-based,Category,-0.08772
+Area Control / Area Influence,Mechanic,0.08641
+Religious,Category,-0.08611
+Adventure,Category,-0.08235
+Murder/Mystery,Category,0.07972
+Set Collection,Mechanic,0.07719
+Post-Napoleonic,Category,0.07676
+Nautical,Category,0.07623
+Science Fiction,Category,-0.07260
+Partnerships,Mechanic,0.07211
+City Building,Category,0.07152
+Bluffing,Category,0.06929
+Press Your Luck,Mechanic,0.06905
+Area-Impulse,Mechanic,0.06805
+Maze,Category,0.06805
+Simulation,Mechanic,0.06750
+Wargame,Category,0.06684
+Age of Reason,Category,0.06566
+Hand Management,Mechanic,0.06544
+Pick-up and Deliver,Mechanic,-0.06214
+Pike and Shot,Category,-0.06213
+Political,Category,-0.06203
+Party Game,Category,0.06126
+Dice Rolling,Mechanic,0.06049
+Ancient,Category,0.05957
+Commodity Speculation,Mechanic,0.05944
+Industry / Manufacturing,Category,-0.05914
+Time Track,Mechanic,-0.05833
+Area Movement,Mechanic,-0.05362
+Real-time,Category,0.04838
+Trading,Mechanic,-0.04825
+Campaign / Battle Card Driven,Mechanic,0.04479
+Korean War,Category,-0.04240
+Pattern Recognition,Mechanic,0.04225
+Spies/Secret Agents,Category,0.04108
+Educational,Category,0.04015
+Environmental,Category,-0.03970
+Number,Category,0.03802
+Action / Movement Programming,Mechanic,-0.03472
+Card Drafting,Mechanic,0.03446
+Abstract Strategy,Category,0.03332
+Co-operative Play,Mechanic,0.03318
+Tile Placement,Mechanic,0.03288
+Children's Game,Category,0.03258
+Dice,Category,-0.03241
+Take That,Mechanic,0.03207
+Humor,Category,-0.03026
+Pirates,Category,-0.02786
+Animals,Category,0.02779
+Electronic,Category,0.02739
+Card Game,Category,-0.02708
+Mafia,Category,0.02627
+Hex-and-Counter,Mechanic,-0.02586
+American Revolutionary War,Category,0.02229
+Point to Point Movement,Mechanic,-0.02188
+American Civil War,Category,0.02186
+Worker Placement,Mechanic,-0.02152
+Action Point Allowance System,Mechanic,0.02086
+Stock Holding,Mechanic,0.02063
+Arabian,Category,0.02062
+Area Enclosure,Mechanic,0.02049
+Transportation,Category,-0.02018
+Territory Building,Category,-0.02017
+Fighting,Category,0.01984
+Horror,Category,-0.01505
+Comic Book / Strip,Category,-0.01502
+Pattern Building,Mechanic,0.01311
+Modular Board,Mechanic,-0.01131
+Music,Category,-0.01125
+Puzzle,Category,-0.01124
+Secret Unit Deployment,Mechanic,0.01014
+Variable Player Powers,Mechanic,0.01003
+Voting,Mechanic,0.01002
+Storytelling,Mechanic,0.00965
+Deduction,Category,0.00848
+Fantasy,Category,-0.00833
+World War II,Category,0.00792
+Prehistoric,Category,0.00761
+Auction/Bidding,Mechanic,0.00757
+Medieval,Category,0.00555
+Civilization,Category,0.00501
+American West,Category,-0.00424
+Space Exploration,Category,-0.00185
+Variable Phase Order,Mechanic,0.00063
